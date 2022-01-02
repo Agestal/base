@@ -33,21 +33,15 @@ class LoginController extends Controller
      *
      * @return void
      */
+
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
     }
+
     protected function redirectTo()
     {
         return '/';
     }
-    public function authenticate(Request $request)
-    {
-        $credentials = $request->only('email', 'password');
 
-        if (Auth::attempt($credentials)) {
-            // Authentication passed...
-            return redirect()->intended('/');
-        }
-    }
 }

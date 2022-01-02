@@ -8,7 +8,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Essence</h1>
+            <h1 class="m-0">TRperitaciones</h1>
           </div><!-- /.col -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
@@ -26,7 +26,7 @@
               <div class="inner">
                 <h3>150</h3>
 
-                <p>Ventas este mes</p>
+                <p>Clientes totales</p>
               </div>
               <div class="icon">
                 <i class="ion ion-bag"></i>
@@ -41,7 +41,7 @@
               <div class="inner">
                 <h3>53<sup style="font-size: 20px">%</sup></h3>
 
-                <p>Productos este mes</p>
+                <p>Siniestros gestionados</p>
               </div>
               <div class="icon">
                 <i class="ion ion-stats-bars"></i>
@@ -56,7 +56,7 @@
               <div class="inner">
                 <h3>44</h3>
 
-                <p>Clientes nuevos este mes</p>
+                <p>Siniestros este mes</p>
               </div>
               <div class="icon">
                 <i class="ion ion-person-add"></i>
@@ -71,7 +71,7 @@
               <div class="inner">
                 <h3>65</h3>
 
-                <p>Peluqueria / Estética </p>
+                <p> Aseguradoras </p>
               </div>
               <div class="icon">
                 <i class="ion ion-pie-graph"></i>

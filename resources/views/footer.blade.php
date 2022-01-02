@@ -1,5 +1,5 @@
 <footer class="main-footer">
-    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
+    <strong>Copyright &copy; 2014-2021 <a href="#">TRperitaciones.com.io</a>.</strong>
     All rights reserved.
     <div class="float-right d-none d-sm-inline-block">
       <b>Version</b> 3.1.0
@@ -15,13 +15,26 @@
 <!-- ./wrapper -->
 
 <!-- jQuery -->
+
+<!-- jQuery -->
 <script src="{{ url('plugins/jquery/jquery.min.js') }}"></script>
-<!-- jQuery UI 1.11.4 -->
-<script src="{{ url('plugins/jquery-ui/jquery-ui.min.js') }}"></script>
-<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-<script>
-  $.widget.bridge('uibutton', $.ui.button)
-</script>
+<!-- Bootstrap 4 -->
+<script src="{{ url('plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+
+<script src="{{ url('plugins/select2/js/select2.full.min.js') }}"></script>
+  <!-- DataTables  & Plugins -->
+  <script src="{{ url('plugins/datatables/jquery.dataTables.min.js') }}"></script>
+<script src="{{ url('plugins/datatables-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
+<script src="{{ url('plugins/datatables-responsive/js/dataTables.responsive.min.js') }}"></script>
+<script src="{{ url('plugins/datatables-responsive/js/responsive.bootstrap4.min.js') }}"></script>
+<script src="{{ url('plugins/datatables-buttons/js/dataTables.buttons.min.js') }}"></script>
+<script src="{{ url('plugins/datatables-buttons/js/buttons.bootstrap4.min.js') }}"></script>
+<script src="{{ url('plugins/jszip/jszip.min.js') }}"></script>
+<script src="{{ url('plugins/pdfmake/pdfmake.min.js') }}"></script>
+<script src="{{ url('plugins/pdfmake/vfs_fonts.js') }}"></script>
+<script src="{{ url('plugins/datatables-buttons/js/buttons.html5.min.js') }}"></script>
+<script src="{{ url('plugins/datatables-buttons/js/buttons.print.min.js') }}"></script>
+<script src="{{ url('plugins/datatables-buttons/js/buttons.colVis.min.js') }}"></script>
 <!-- Bootstrap 4 -->
 <script src="{{ url('plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 <!-- ChartJS -->
@@ -48,5 +61,10 @@
 <script src="{{ url('dist/js/demo.js') }}"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="{{ url('dist/js/pages/dashboard.js') }}"></script>
+<script>
+  $(document).ready(function() {
+    $('.select2').select2();
+  });
+</script>
 </body>
 </html>
