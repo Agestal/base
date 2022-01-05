@@ -1488,6 +1488,7 @@
 127.0.0.1 - - [02/Jan/2022:15:12:31 +0100] "GET /clientes HTTP/1.1" 200 4018 "http://www.aseguradora.local/clientes/create" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36"
 127.0.0.1 - - [02/Jan/2022:15:12:43 +0100] "GET /clientes HTTP/1.1" 200 4012 "http://www.aseguradora.local/clientes/create" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36"
 127.0.0.1 - - [02/Jan/2022:15:13:02 +0100] "GET / HTTP/1.1" 200 3600 "http://www.aseguradora.local/clientes" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36"
+<<<<<<< HEAD
 87.223.125.182 - - [02/Jan/2022:16:50:47 +0000] "GET / HTTP/1.1" 302 1629 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36"
 87.223.125.182 - - [02/Jan/2022:16:50:47 +0000] "GET /login HTTP/1.1" 200 2356 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36"
 87.223.125.182 - - [02/Jan/2022:16:50:47 +0000] "GET /plugins/select2/css/select2.min.css HTTP/1.1" 200 2335 "http://administracion.trperitaciones.com/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36"
@@ -1824,3 +1825,8 @@
 185.164.119.242 - - [05/Jan/2022:12:04:08 +0000] "GET /dist/js/demo.js HTTP/1.1" 200 3698 "http://administracion.trperitaciones.com/siniestros/create" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36"
 185.164.119.242 - - [05/Jan/2022:12:04:08 +0000] "GET /dist/js/pages/dashboard.js HTTP/1.1" 200 2747 "http://administracion.trperitaciones.com/siniestros/create" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36"
 185.164.119.242 - - [05/Jan/2022:12:04:07 +0000] "GET /plugins/pdfmake/pdfmake.min.js HTTP/1.1" 200 524021 "http://administracion.trperitaciones.com/siniestros/create" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36"
+=======
+127.0.0.1 - - [05/Jan/2022:13:04:21 +0100] "GET /plugins/fontawesome-free/webfonts/fa-regular-400.woff2 HTTP/1.1" 304 182 "http://www.aseguradora.local/plugins/fontawesome-free/css/all.min.css" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36"
+127.0.0.1 - - [05/Jan/2022:13:04:22 +0100] "GET /siniestros HTTP/1.1" 500 629497 "http://www.aseguradora.local/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36"
+127.0.0.1 - - [05/Jan/2022:13:04:38 +0100] "GET /favicon.ico HTTP/1.1" 304 179 "http://www.aseguradora.local/siniestros" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36"
+>>>>>>> 3bc91969559096dce27164cf889de0d1112f22e2
