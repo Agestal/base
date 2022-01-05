@@ -21,7 +21,9 @@ class SiniestrosController extends Controller
     {
         $clientes = DB::table('clientes')->orderBy('nombre')->get();
         $aseguradoras = DB::table('aseguradoras')->orderBy('nombre')->get();
-        return view($this->path.'.create',compact('clientes','aseguradoras'));
+        $contador = DB::table('siniestros')->last();
+        $contador = $contador->id;
+        return view($this->path.'.create',compact('clientes','aseguradoras','contador'));
     }
     public function store(Request $request)
     {

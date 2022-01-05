@@ -1,6 +1,18 @@
 @include('header')
 @include('top')
 @include('left')
+<script>
+$(document).ready(function() {
+  $(".calculo").on('blur', function() {
+    var fecha = new Date();
+	  var year = fecha.getFullYear();
+    var codigo = $("#aseguradora").val();
+    var contador = $("#contador").val();
+    contador++;
+    var cod = year."-".codigo."-".contador;
+  }); 
+});
+</script>
   <div class="content-wrapper">
     <div class="content-header">
       <div class="container-fluid">
@@ -23,9 +35,10 @@
               <div class="card-body">
                 <form method="POST" action="{{url('aseguradoras')}}" >
                 <input type="hidden" name="_token" value="{{ csrf_token() }}"/>
+                <input type="hidden" id="contador" value="{{$contador}}" />
                 <div class="form-group"> 
                   <label> Cliente </label>
-                  <select class="form-control select2" name="cliente" >
+                  <select class="form-control select2 codigo" name="cliente" >
                       <option value="0" > - Escoge Cliente - </option>
                       @foreach ( $clientes as $c )
                         <option value="{{ $c->id }} " > {{$c->nombre}} - {{ $c->apellidos }} </option>
@@ -34,7 +47,7 @@
                 </div>
                 <div class="form-group"> 
                   <label> Aseguradora </label>
-                  <select class="form-control select2" name="aseguradora" >
+                  <select class="form-control select2 codigo" name="aseguradora" id="aseguradora" >
                       <option value="0" > - Escoge Aseguradora - </option>
                       @foreach ( $aseguradoras as $a )
                         <option value="{{ $a->id }} " > {{$a->nombre}} </option>
