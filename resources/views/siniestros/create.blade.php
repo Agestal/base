@@ -1,18 +1,7 @@
 @include('header')
 @include('top')
 @include('left')
-<script>
-$(document).ready(function() {
-  $(".calculo").on('blur', function() {
-    var fecha = new Date();
-	  var year = fecha.getFullYear();
-    var codigo = $("#aseguradora").val();
-    var contador = $("#contador").val();
-    contador++;
-    var cod = year."-".codigo."-".contador;
-  }); 
-});
-</script>
+
   <div class="content-wrapper">
     <div class="content-header">
       <div class="container-fluid">
@@ -38,7 +27,7 @@ $(document).ready(function() {
                 <input type="hidden" id="contador" value="{{$contador}}" />
                 <div class="form-group"> 
                   <label> Cliente </label>
-                  <select class="form-control select2 codigo" name="cliente" >
+                  <select class="form-control select2 calculo" name="cliente" >
                       <option value="0" > - Escoge Cliente - </option>
                       @foreach ( $clientes as $c )
                         <option value="{{ $c->id }} " > {{$c->nombre}} - {{ $c->apellidos }} </option>
@@ -47,7 +36,7 @@ $(document).ready(function() {
                 </div>
                 <div class="form-group"> 
                   <label> Aseguradora </label>
-                  <select class="form-control select2 codigo" name="aseguradora" id="aseguradora" >
+                  <select class="form-control select2 calculo" name="aseguradora" id="aseguradora" >
                       <option value="0" > - Escoge Aseguradora - </option>
                       @foreach ( $aseguradoras as $a )
                         <option value="{{ $a->id }} " > {{$a->nombre}} </option>
@@ -55,8 +44,20 @@ $(document).ready(function() {
                   </select>
                 </div>
                 <div class="form-group"> 
-                  <label> Código </label>
-                  <input type="text" class="form-control" name="codigo" />
+                  <label>  Referencia TR </label>
+                  <input type="text" class="form-control" name="codigo" id="codigo" />
+                </div>
+                <div class="form-group"> 
+                  <label> Póliza </label>
+                  <input type="text" class="form-control" name="poliza" id="poliza" />
+                </div>
+                <div class="form-group"> 
+                  <label> Dirección </label>
+                  <input type="text" class="form-control" name="direccion" id="direccion" />
+                </div>
+                <div class="form-group"> 
+                  <label> Población </label>
+                  <input type="text" class="form-control" name="poblacion" id="poblacion" />
                 </div>
                 <div class="form-group"> 
                   <input type="submit" class="btn btn-success" value="GUARDAR" />
@@ -70,3 +71,16 @@ $(document).ready(function() {
     </section>
   </div>
  @include('footer')
+ <script>
+$(document).ready(function() {
+  $(".calculo").on('change', function() {
+    var fecha = new Date();
+	  var year = fecha.getFullYear();
+    var codigo = $("#aseguradora").val();
+    var contador = $("#contador").val();
+    contador++;
+    var cod = year+"-"+codigo+"-"+contador;
+    $("#codigo").val(cod);
+  }); 
+});
+</script>

@@ -22,7 +22,7 @@ class SiniestrosController extends Controller
         $clientes = DB::table('clientes')->orderBy('nombre')->get();
         $aseguradoras = DB::table('aseguradoras')->orderBy('nombre')->get();
         $contador = DB::table('siniestros')->orderBy('id','DESC')->first();
-        isset($contador->id) ? $contador = $contador->id : $contador = 1;
+        isset($contador->id) ? $contador = $contador->id : $contador = 0;
 
         return view($this->path.'.create',compact('clientes','aseguradoras','contador'));
     }
