@@ -15,20 +15,15 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 Route::get('logout', 'Auth\LoginController@logout');
 Route::post('login','Auth\LoginController@login');
-Route::get('/', 'HomeController@index');
 
-Route::post('clientes/update','ClientesController@update');
-Route::resource('clientes','ClientesController');
-Route::post('clientes/eliminar','ClientesController@eliminar');
-Route::get('clientes/show/{id}','ClientesController@show');
-Route::post('clientes/consultar_poliza','ClientesController@consultar_poliza');
-
-Route::post('aseguradoras/update','AseguradorasController@update');
-Route::resource('aseguradoras','AseguradorasController');
-Route::post('aseguradoras/eliminar','AseguradorasController@eliminar');
-Route::get('aseguradoras/show/{id}','AseguradorasController@show');
-
-Route::post('siniestros/update','SiniestrosController@update');
-Route::resource('siniestros','SiniestrosController');
-Route::post('siniestros/eliminar','SiniestrosController@eliminar');
-Route::get('siniestros/show/{id}','SiniestrosController@show');
+Route::group(['middleware' => 'admin'], function () {
+    /* Rutas GET */
+    Route::get('/', 'HomeController@index');
+    Route::get('clientes/show/{id}','ClientesController@show');
+    /* Rutas POST */
+    Route::post('clientes/update','ClientesController@update');
+    Route::post('clientes/eliminar','ClientesController@eliminar');
+    /* CRUDS básicos */
+    Route::resource('clientes','ClientesController');
+    
+});

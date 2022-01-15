@@ -19,11 +19,10 @@ class TableClientes extends Migration
             $table->string('apellidos')->nullable();
             $table->string('email')->nullable();
             $table->string('telefono')->nullable();
-            $table->string('nif')->nullable();
+            $table->string('nif');
             $table->string('poblacion')->nullable();
             $table->string('direccion')->nullable();
             $table->string('codigo_postal')->nullable();
-            $table->string('poliza')->nullable();
             $table->timestamps();
         });
     }

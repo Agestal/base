@@ -14,12 +14,6 @@ class ClientesController extends Controller
         $datos = DB::table('clientes')->get();
         return view($this->path.'.index',compact('datos'));
     }
-    public function consultar_poliza(Request $request)
-    {
-        $id = $request->id;
-        $c = Clientes::findOrFail($id);
-        return $c->poliza;
-    }
     public function create()
     {
         return view($this->path.'.create');
@@ -35,7 +29,6 @@ class ClientesController extends Controller
         $c->poblacion = $request->poblacion;
         $c->direccion = $request->direccion;
         $c->codigo_postal = $request->codigo_postal;
-        $c->poliza = $request->poliza;
         $c->save();
         return redirect()->to($this->path);
     }
@@ -61,7 +54,6 @@ class ClientesController extends Controller
         $c->poblacion = $request->poblacion;
         $c->direccion = $request->direccion;
         $c->codigo_postal = $request->codigo_postal;
-        $c->poliza = $request->poliza;
         $c->save();
         return redirect()->to($this->path);
     }
