@@ -28,10 +28,16 @@ class SiniestrosController extends Controller
     }
     public function store(Request $request)
     {
-        $c = new Siniesros();
-        $c->id_cliente = $request->id_cliente;
-        $c->id_aseguradora = $request->id_aseguradora;
+        $c = new Siniestros();
+        $c->id_cliente = $request->cliente;
+        $c->id_aseguradora = $request->aseguradora;
         $c->codigo = $request->codigo;
+        $c->poliza = $request->poliza;
+        $c->fecha_parte = date("Y-m-d");
+        $c->fecha_siniestro = $request->fecha;
+        $c->direccion = $request->direccion;
+        $c->poblacion = $request->poblacion;
+        $c->comentario = $request->comentario;
         $c->save();
         return redirect()->to($this->path);
     }

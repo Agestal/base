@@ -21,6 +21,7 @@ Route::post('clientes/update','ClientesController@update');
 Route::resource('clientes','ClientesController');
 Route::post('clientes/eliminar','ClientesController@eliminar');
 Route::get('clientes/show/{id}','ClientesController@show');
+Route::post('clientes/consultar_poliza','ClientesController@consultar_poliza');
 
 Route::post('aseguradoras/update','AseguradorasController@update');
 Route::resource('aseguradoras','AseguradorasController');
